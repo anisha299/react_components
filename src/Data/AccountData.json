@@ -1,0 +1,26 @@
+[
+    {
+        "sortCode": "11-22-33",
+        "accountNumber": "1234567890",
+        "accountType": "Savings",
+        "accountName": "Anisha Gupta"
+    },
+    {
+        "sortCode": "22-33-11",
+        "accountNumber": "1344578901",
+        "accountType": "Savings",
+        "accountName": "Mayank"
+    },
+    {
+        "sortCode": "00-44-88",
+        "accountNumber": "1246784527",
+        "accountType": "Current",
+        "accountName": "Mohit"
+    },
+    {
+        "sortCode": "44-55-33",
+        "accountNumber": "4456839890",
+        "accountType": "Current",
+        "accountName": "Aditi"
+    }
+]
