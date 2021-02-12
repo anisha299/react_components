@@ -31,7 +31,7 @@ const Option = (props, state) => {
                 {props.isSelected && <Image
                     src={img}
                     sx={{
-                        width: [ '100%', '2%' ],
+                        width: [ '4%', '2%' ],
                         height: ['50%'],
                         paddingTop: "2"
                     }}
@@ -63,13 +63,13 @@ const DropDown= ()=> {
         p={5}
         m= {"auto"}
         fontSize={3}
-        width={[ 1/2 ]}
-        height={[150]}
+        width={[1,1, 1/2 ]}
         >
             <Select 
             components={{ Option }}
             options = {options} 
             styles={style}
+            placeholder= {"Select Your Account..."}
             />
         </Box>
       );
