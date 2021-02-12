@@ -9,16 +9,24 @@ const style= {
         return {
           ...styles,
           backgroundColor: props.isSelected ? "white" : null,
-          color: "black"
+          color: "black",
+          fontSize: ".8rem"
         };
       },
 
     input: (styles)=> {
       return{
        ...styles,
-       height: "70px"
+       height: "60px"
      }
-   }   
+   },
+   
+    placeholder: (styles)=>{
+      return{
+        ...styles,
+        fontSize: "1rem"
+      }
+    }
 }
 
 const Option = (props, state) => {
@@ -31,9 +39,9 @@ const Option = (props, state) => {
                 {props.isSelected && <Image
                     src={img}
                     sx={{
-                        width: [ '4%', '2%' ],
-                        height: ['50%'],
-                        paddingTop: "2"
+                        width: [ '3%', '3%' ],
+                        height: ['20%','80%'],
+                        paddingTop: ['3/2', '3/2']
                     }}
                     />
                 }
@@ -47,7 +55,7 @@ const options= data.map(account=>{
     return {
       value: 
         <Text>{account.sortCode} {account.accountNumber} {account.accountType} - {account.accountName}</Text>, 
-      label: <Flex flexDirection="column">
+      label: <Flex flexDirection="column" style={{fontSize: ".8rem"}}>
               <Flex flexDirection= "row">
                 <Text>{account.sortCode}</Text>
                 <Text mx={3}>{account.accountNumber}</Text>
@@ -63,7 +71,7 @@ const DropDown= ()=> {
         p={5}
         m= {"auto"}
         fontSize={3}
-        width={[1,1, 1/2 ]}
+        width={['100%', 1/3 ]}
         >
             <Select 
             components={{ Option }}
