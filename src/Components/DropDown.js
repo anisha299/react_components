@@ -1,25 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Select, {components} from 'react-select';
 import {Box, Flex, Image, Text} from 'rebass';
 import data from '../Data/AccountData.json';
 import img from '../Assets/Dropdown/green-tick.png';
 
 const style= {
-    option: (styles, props) => {
+    option: (styles, props, state) => {
         return {
           ...styles,
           backgroundColor: props.isSelected ? "white" : null,
           color: "black"
         };
-      }
+      },
+
+    input: (styles)=> {
+      return{
+       ...styles,
+       height: "70px"
+     }
+   }   
 }
 
-const Option = props => {
+const Option = (props, state) => {
     return (
       <div>
         <components.Option {...props}>
             <Flex justifyContent= "space-between">
-                <label>{props.label}</label>
+                {/* <label>{props.label}</label>  */}
+                <label>{props.value}</label>
                 {props.isSelected && <Image
                     src={img}
                     sx={{
@@ -36,12 +44,15 @@ const Option = props => {
   };
 
 const options= data.map(account=>{
-    return {value: {account}, 
-        label: <Flex flexDirection= "row">
-                <Text mx={1}>{account.sortCode}</Text>
-                <Text mx={1}>{account.accountNumber}</Text>
-                <Text mx={1}>{account.accountType}</Text>
-                <Text mx={1}>{account.accountName}</Text>
+    return {
+      value: 
+        <Text>{account.sortCode} {account.accountNumber} {account.accountType} - {account.accountName}</Text>, 
+      label: <Flex flexDirection="column">
+              <Flex flexDirection= "row">
+                <Text>{account.sortCode}</Text>
+                <Text mx={3}>{account.accountNumber}</Text>
+              </Flex>
+                <Text>{account.accountType} - {account.accountName}</Text>      
         </Flex>
     }
 })

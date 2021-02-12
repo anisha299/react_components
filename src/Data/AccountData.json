@@ -1,26 +1,26 @@
 [
     {
         "sortCode": "11-22-33",
-        "accountNumber": "1234567890",
-        "accountType": "Savings",
+        "accountNumber": "12345678",
+        "accountType": "Savings Account",
         "accountName": "Anisha Gupta"
     },
     {
         "sortCode": "22-33-11",
-        "accountNumber": "1344578901",
-        "accountType": "Savings",
+        "accountNumber": "13445789",
+        "accountType": "Savings Account",
         "accountName": "Mayank"
     },
     {
         "sortCode": "00-44-88",
-        "accountNumber": "1246784527",
-        "accountType": "Current",
+        "accountNumber": "12467845",
+        "accountType": "Current Account",
         "accountName": "Mohit"
     },
     {
         "sortCode": "44-55-33",
-        "accountNumber": "4456839890",
-        "accountType": "Current",
+        "accountNumber": "44568398",
+        "accountType": "Current Account",
         "accountName": "Aditi"
     }
 ]
